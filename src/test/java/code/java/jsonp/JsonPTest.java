@@ -23,11 +23,11 @@ public class JsonPTest {
   private JSONObject getInputTestStrucure() {
     String jsonObject;
     try {
-      jsonObject = new String(Files.readAllBytes(Paths.get("src/test/resources/Json.json")));
+      jsonObject = new String(Files.readAllBytes(Paths.get("src/test/resources/SampleJson1.json")));
       return new JSONObject(jsonObject);
     } catch (IOException | JSONException ioException) {
       throw new FileSystemNotFoundException(
-          "Unable to find the JSON File in src/test/resources/Json.json!!!" + "\n" + ioException);
+          "Unable to find the JSON File in src/test/resources/SampleJson1.json!!!" + "\n" + ioException);
     }
   }
 

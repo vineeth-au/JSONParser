@@ -6,7 +6,6 @@ import org.json.JSONObject;
 
 public class JsonP {
 
-
   /**
    * This function get's the node value of the JSON Object/Array.
    *
@@ -24,9 +23,9 @@ public class JsonP {
           return null;
         }
       }
-      if (JSONObject.class.isInstance(currentObject)) {
+      if (currentObject instanceof JSONObject) {
         currentObject = getFromJSONObject(currentObject, eachField);
-      } else if (JSONArray.class.isInstance(currentObject)) {
+      } else if (currentObject instanceof JSONArray) {
         currentObject = getFromJSONArray(currentObject, eachField);
       } else {
         return currentObject;
@@ -52,7 +51,7 @@ public class JsonP {
     String[] fields = objectKey.split(Constants.FIELD_DELIMITER);
     for (int i = 0; i < fields.length; i++) {
       if (i == fields.length - 1) {
-        if (JSONObject.class.isInstance(currentObject)) {
+        if (currentObject instanceof JSONObject) {
           setJSONObject(currentObject, fields[i], value);
           return inputJson;
         } else {
@@ -65,9 +64,9 @@ public class JsonP {
           throw new IllegalStateException();
         }
       }
-      if (JSONObject.class.isInstance(currentObject)) {
+      if (currentObject instanceof JSONObject) {
         currentObject = getFromJSONObject(currentObject, fields[i]);
-      } else if (JSONArray.class.isInstance(currentObject)) {
+      } else if (currentObject instanceof JSONArray) {
         currentObject = getFromJSONArray(currentObject, fields[i]);
       } else {
         throw new IllegalArgumentException();

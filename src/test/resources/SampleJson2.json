@@ -1,0 +1,39 @@
+{
+  "vehicle": {
+    "id": "V123",
+    "model": "Model X",
+    "nickname": null,
+    "active": true,
+    "metadata": {}
+  },
+  "telemetry": {
+    "speed": 72,
+    "temperature": -12.5,
+    "battery": 0,
+    "charging": false
+  },
+  "events": [
+    {
+      "type": "LOCATION",
+      "coordinates": {
+        "latitude": 43.6532,
+        "longitude": -79.3832
+      }
+    },
+    {
+      "type": "STATUS",
+      "message": "",
+      "details": null
+    }
+  ],
+  "speeds": [50, 72, 0],
+  "tags": [],
+  "mixed": ["ready", 42, true, null, {"code": "OK"}],
+  "specialKeys": {
+    "": "empty key",
+    "a.b": "key containing a dot",
+    "a/b": "key containing a slash",
+    "a~b": "key containing a tilde",
+    "01": "numeric-looking object key"
+  }
+}

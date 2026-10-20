@@ -42,12 +42,14 @@ As per the current implementation the getNodeValue(String obj1, String obj2) wou
 ```
 Building the code
 -----------------
-
 Prerequisite: JDK 17 or newer. From the project root, run:
 
 ```sh
 ./mvnw test
 ```
+Docs
+----
+
 
 Example
 -------
