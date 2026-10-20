@@ -43,7 +43,11 @@ As per the current implementation the getNodeValue(String obj1, String obj2) wou
 Building the code
 -----------------
 
-Download the project and make sure you have Apache Maven installed.
+Prerequisite: JDK 17 or newer. From the project root, run:
+
+```sh
+./mvnw test
+```
 
 Example
 -------
